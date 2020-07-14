@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo');
-
-
 #resumen {
     display: grid;
     width: 100%;
     margin: 0 auto;
     grid-gap: 10px;
-    grid-template-areas: "navbar""money" "cuentasYMovimientos" "cards" "banner";
+    grid-template-areas: "header" "navbar""money" "cuentasYMovimientos" "cards" "banner" "text" "footer";
     /* cuentasYMovimientos "tarjetas" "banner" "text" "footer"; */
 }
-
+app-header {
+    grid-area: header;
+}
+app-footer{
+    grid-area: footer;
+}
 app-money {
     grid-area: money;
 }
@@ -30,10 +33,21 @@ app-banner {
     grid-area: banner;
 }
 
+app-text-section{
+    grid-area:text;
+}
+@media (min-width: 900px) {
+    #resumen {
+        display: grid;
+        grid-template-columns: 100px 1fr 100px;
+        grid-template-areas: ". header ." ". navbar ." ". money . " ". cuentasYMovimientos ." ". cards     ." ". banner   ." ". text ."". footer .";
+    }
+}
+
 @media (min-width: 1200px) {
     #resumen {
         display: grid;
         grid-template-columns: 200px 1fr 200px;
-        grid-template-areas: ". navbar ." ". money . " ". cuentasYMovimientos ." ". cards     ." ". banner   ."; 
+        grid-template-areas: ". header ." ". navbar ." ". money . " ". cuentasYMovimientos ." ". cards     ." ". banner   ." ". text ."". footer .";
     }
 }

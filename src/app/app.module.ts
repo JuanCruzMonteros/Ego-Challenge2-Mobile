@@ -11,6 +11,8 @@ import { CardsComponent } from './components/resumen/cards/cards.component';
 import { AccountsComponent } from './components/resumen/accounts/accounts.component';
 import { NavbarComponent } from './components/resumen/navbar/navbar.component';
 import { MoneyComponent } from './components/resumen/money/money.component';
+import { TextSectionComponent } from './components/resumen/text-section/text-section.component';
+import { Footer2Component } from './components/globals/footer2/footer2.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MoneyComponent } from './components/resumen/money/money.component';
     CardsComponent,
     AccountsComponent,
     NavbarComponent,
-    MoneyComponent
+    MoneyComponent,
+    TextSectionComponent,
+    Footer2Component
   ],
   imports: [
     BrowserModule,
