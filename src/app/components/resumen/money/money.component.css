@@ -1,44 +1,37 @@
 #money {
     display: grid;
-    grid-template-areas: "row1"
-                        "row2""row3";
-                        margin-top: 20px ;
-                        margin-bottom: 20px;
-                        row-gap: 16px;
+    grid-template-areas: "row1" "row2" "row3";
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    row-gap: 20px;
 }
 
 .row1 {
     grid-area: row1;
-    display: grid;
-    grid-template-columns: 1fr;
-    /*grid-column-start: 1;
-    grid-column-end: 4;*/
-    grid-row: 1;
 }
 
 .row2 {
     grid-area: row2;
-    display: grid;
-    grid-template-columns: 1fr;
-    /*grid-column-start: 1;
-    grid-column-end: 4;*/
-    grid-row: 2; 
 }
+
 .row3 {
     grid-area: row3;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row: 3; 
 }
 
 .contentCenter {
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    align-self: center;
-    justify-self: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .saldo {
-    height: 16px;
     font-family: Heebo;
     font-size: 12px;
     font-weight: normal;
@@ -51,8 +44,6 @@
 }
 
 .label {
-    width: 67px;
-    height: 16px;
     font-family: Heebo;
     font-size: 12px;
     font-weight: normal;
@@ -65,33 +56,41 @@
 }
 
 .right {
-    width: 15px;
     height: 15px;
     object-fit: contain;
 }
 
 .moneda {
-    height: 35px;
     font-family: Heebo;
-    font-size: 40px;
+    font-size: 29px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: 0.88;
     letter-spacing: normal;
+    text-align: center;
     color: #333333;
 }
 
 .moneda-simbolo {
-    font-family: Heebo-Regular;
-    font-size: 32px;
-    letter-spacing: 0;
+    font-size: 23px;
 }
 
 .moneda-decimales {
-    font-size: 32px;
+    font-size: 23px;
 }
 
 .moneda-style-2 {
     opacity: 50%;
+}
+
+@media (min-width: 720px) {
+    .moneda {
+        font-size: 40px;
+   }
+
+   .moneda-simbolo {
+    font-size: 32px;
+   }
+
 }

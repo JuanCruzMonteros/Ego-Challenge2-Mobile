@@ -1,21 +1,19 @@
 #banner {
-    /* grid-area: banner; */    
-    grid-template-areas: "one two";
-    grid-template-columns: repeat(1fr,2);
-    grid-gap: 24px;
-    display: flex;
-    margin:0;
-    margin-left: 0;
-    margin-right: 0;
+    grid-template-areas: "one";
 }
-#banner .item-img {
+.item-img {
+
+    /* width: 355px; */
+    
+    height: 200px;
+  
+    object-fit: contain;
+
+    /* 1024
     width: 628px;
     height: 200px;
-    object-fit: contain;
+    object-fit: contain; */
 }
-#banner .item-one {
+.item-one {
     grid-area: one;
-}
-#banner .item-two {
-    grid-area: two;
 }

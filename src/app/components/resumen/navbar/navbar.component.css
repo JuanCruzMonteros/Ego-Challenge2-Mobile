@@ -1,18 +1,28 @@
 #navbar {
-    display: flex;
+    display: none;
 }
 
+/* ----------- GRIDS ------------- */
 
 .card-grid {
     display: grid;
-    grid-template-areas: item1 item2 item3 item4;
+    grid-template-areas: "item1 item2 item3 item4";
 }
 
 .column {
-    width: 320px;
     height: 36px;
     border-radius: 4px;
     border: solid 1px #ededed;
+
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .item1 {
@@ -20,21 +30,25 @@
     grid-column: 1/2;
     grid-template-columns: 1fr;
 }
+
 .item2 {
     grid-column: item2;
     grid-column: 2/3;
     grid-template-columns: 1fr;
 }
+
 .item3 {
     grid-column: item3;
     grid-column: 3/4;
     grid-template-columns: 1fr;
 }
+
 .item4 {
     grid-column: item4;
     grid-column: 4/5;
     grid-template-columns: 1fr;
 }
+
 .left {
     grid-column: left;
     grid-column: 1/2;
@@ -45,4 +59,28 @@
     grid-column: right;
     grid-column: 2/3;
     grid-template-columns: 1fr;
+}
+
+/* ----------- TEXT ------------- */
+
+.text {
+    font-family: Heebo;
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #3a3a3a;
+}
+
+.text .text-style-1 {
+    font-weight: normal;
+}
+
+@media (min-width: 1020px) {
+    #navbar {
+        display: inline;
+    }
 }

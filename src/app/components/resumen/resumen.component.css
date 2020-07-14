@@ -1,23 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+
+
 #resumen {
     display: grid;
     width: 100%;
     margin: 0 auto;
-    grid-template-columns: 1fr;
-    /* grid-template-rows: 80px auto auto 80px; */
-    grid-template-rows: 10px 1fr 10px;
     grid-gap: 10px;
-    grid-template-areas: "header" "money" "cuentasYMovimientos" "cards";
-    /* "tarjetas" "banner" "text" "footer"; */
+    grid-template-areas: "navbar""money" "cuentasYMovimientos" "cards" "banner";
+    /* cuentasYMovimientos "tarjetas" "banner" "text" "footer"; */
 }
-
-/*   display 1280 */
-
-/*
-    display: grid;
-    grid-template-columns: 200px 1fr 200px;
-    grid-template-areas: ". money . "". navbar ." ". cuentas ." ". cards     ." ". banner   .";
-
-    */
 
 app-money {
     grid-area: money;
@@ -39,3 +30,10 @@ app-banner {
     grid-area: banner;
 }
 
+@media (min-width: 1200px) {
+    #resumen {
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-areas: ". navbar ." ". money . " ". cuentasYMovimientos ." ". cards     ." ". banner   ."; 
+    }
+}
