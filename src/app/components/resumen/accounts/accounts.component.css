@@ -11,7 +11,6 @@
 .row1 {
     grid-area: row1;
     display: grid;
-    
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -20,14 +19,12 @@
 .row2 {
     grid-area: row2;
     display: grid;
-
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .box {
-    height: 50px;
     border-radius: 7px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
@@ -46,13 +43,11 @@
 .Text {
     font-family: Heebo;
     font-size: 16px;
-    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.31;
     letter-spacing: normal;
     color: #333333;
-
     margin-left: 10px;
 }
 
@@ -70,24 +65,29 @@
     object-fit: contain;
 }
 
-.align-left {
+.flex-center {
     display: flex;
     align-items: center;
 }
 
-.align-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+/* movimientos */
+
+.tr-style {
+    -ms-flex-align: stretch;
 }
 
-/* movimientos */
+.hr-style-line {
+    /* border-top: 2px dashed ; */
+    opacity: 0.2;
+    border-width: 2px;
+    border-style: solid 1px dotted #939393;
+    border-color: red;
+}
 
 .Fave-Default {
     width: 22px;
     height: 22px;
     object-fit: contain;
-    
 }
 
 hr .line {
@@ -96,22 +96,30 @@ hr .line {
     background-color: #c7c7c7;
 }
 
-@media (min-width: 900px){
-    
+/* SUMARY DETAILS */
+
+summary {
+    display: flex;
+}
+
+hr.bg {
+    border-radius: 7px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+}
+
+@media (min-width: 900px) {
     .row1 {
         grid-column: 1;
         grid-row: 1;
-
         margin-top: 30px;
         margin-bottom: 30px;
         margin-left: 0;
         margin-right: 12px;
-
     }
     .row2 {
         grid-column: 2;
         grid-row: 1;
-
         margin-top: 30px;
         margin-bottom: 30px;
         margin-left: 12px;
@@ -119,23 +127,18 @@ hr .line {
     }
 }
 
-
-@media (min-width: 750px){
-    
+@media (min-width: 750px) {
     .row1 {
         grid-column: 1;
         grid-row: 1;
-
         margin-top: 30px;
         margin-bottom: 30px;
         margin-left: 0;
         margin-right: 12px;
-
     }
     .row2 {
         grid-column: 2;
         grid-row: 1;
-
         margin-top: 30px;
         margin-bottom: 30px;
         margin-left: 12px;
