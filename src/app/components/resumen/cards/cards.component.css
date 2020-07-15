@@ -1,4 +1,5 @@
 #cards {
+    overflow: hidden;
     display: grid;
     grid-template-areas: "cardsRow1" "cardsRow2";
     padding-left: 16px;

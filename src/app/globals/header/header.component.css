@@ -54,8 +54,11 @@
     line-height: 1.14;
     letter-spacing: 0.12px;
     color: #333333;
-
     margin-left: 10px;
+}
+
+.menu-desktop {
+    display: none;
 }
 
 .label-saludo {
@@ -70,6 +73,9 @@
     color: #333333;
 }
 
+.label-saludo-desktop{
+    display: none;
+}
 .read {
     width: 22px;
     height: 22px;
@@ -81,4 +87,37 @@
     height: 22px;
     object-fit: contain;
     margin-left: 16px;
+}
+
+@media (min-width: 900px) {
+    .menu-desktop {
+        display: inline;
+        align-self: center;
+        font-family: Heebo;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.29;
+        letter-spacing: 0.1px;
+        color: #939393;
+    }
+    .label-saludo {
+        display: none;
+    }
+
+    .label-saludo-desktop{
+        display: block;
+    }
+    .right-desktop {
+        width: 17px;
+        height: 17px;
+        object-fit: contain;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .label-saludo{
+        content: '';
+    }
 }

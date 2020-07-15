@@ -12,7 +12,6 @@ import { AccountsComponent } from './components/resumen/accounts/accounts.compon
 import { NavbarComponent } from './components/resumen/navbar/navbar.component';
 import { MoneyComponent } from './components/resumen/money/money.component';
 import { TextSectionComponent } from './components/resumen/text-section/text-section.component';
-import { Footer2Component } from './components/globals/footer2/footer2.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { Footer2Component } from './components/globals/footer2/footer2.component
     AccountsComponent,
     NavbarComponent,
     MoneyComponent,
-    TextSectionComponent,
-    Footer2Component
+    TextSectionComponent
   ],
   imports: [
     BrowserModule,
