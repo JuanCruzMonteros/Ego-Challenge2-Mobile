@@ -4,7 +4,6 @@
     margin: 0 auto;
     grid-gap: 10px;
     grid-template-areas: "header" "navbar""money" "cuentasYMovimientos" "cards" "banner" "text" "footer";
-    /* cuentasYMovimientos "tarjetas" "banner" "text" "footer"; */
 }
 app-header {
     grid-area: header;
