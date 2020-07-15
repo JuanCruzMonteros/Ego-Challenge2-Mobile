@@ -3,7 +3,7 @@
     display: grid;
     margin: 0 auto;
     grid-gap: 10px;
-    grid-template-areas: "header" "navbar""money" "cuentasYMovimientos" "cards" "banner" "text" "footer";
+    grid-template-areas: "navbar""money" "cuentasYMovimientos" "cards" "banner" "text";
 }
 app-header {
     grid-area: header;
@@ -40,7 +40,7 @@ app-text-section{
     #resumen {
         display: grid;
         grid-template-columns: 100px 1fr 100px;
-        grid-template-areas: ". header ." ". navbar ." ". money . " ". cuentasYMovimientos ." ". cards     ." ". banner   ." ". text ."". footer .";
+        grid-template-areas: ". navbar ." ". money . " ". cuentasYMovimientos ." ". cards     ." ". banner   ." ". text .";
     }
 }
 
@@ -48,6 +48,6 @@ app-text-section{
     #resumen {
         display: grid;
         grid-template-columns: 200px 1fr 200px;
-        grid-template-areas: ". header ." ". navbar ." ". money . " ". cuentasYMovimientos ." ". cards     ." ". banner   ." ". text ."". footer .";
+        grid-template-areas: ". navbar ." ". money . " ". cuentasYMovimientos ." ". cards     ." ". banner   ." ". text .";
     }
 }
