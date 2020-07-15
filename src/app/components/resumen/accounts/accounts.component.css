@@ -14,6 +14,7 @@
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
+    display: block;
 }
 
 .row2 {
@@ -34,7 +35,7 @@
     padding-bottom: 16px;
 }
 
-.Accounts {
+.Accounts-img {
     width: 22px;
     height: 22px;
     object-fit: contain;
@@ -67,33 +68,15 @@
 
 .flex-center {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 /* movimientos */
-
-.tr-style {
-    -ms-flex-align: stretch;
-}
-
-.hr-style-line {
-    /* border-top: 2px dashed ; */
-    opacity: 0.2;
-    border-width: 2px;
-    border-style: solid 1px dotted #939393;
-    border-color: red;
-}
 
 .Fave-Default {
     width: 22px;
     height: 22px;
     object-fit: contain;
-}
-
-hr .line {
-    width: 100%;
-    height: 1px;
-    background-color: #c7c7c7;
 }
 
 /* SUMARY DETAILS */
@@ -107,6 +90,66 @@ hr.bg {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
 }
+
+/* SUMMARY MOVIMIENTOS */
+
+.td-movs-item1 {
+    font-family: Heebo;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.86;
+    letter-spacing: normal;
+    color: #333333;
+}
+
+.td-movs-item2 {
+    font-family: Heebo;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.86;
+    letter-spacing: normal;
+    color: #333333;
+}
+
+.td-movs-item3 {
+    font-family: Heebo;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.86;
+    letter-spacing: normal;
+    text-align: right;
+    color: #333333;
+}
+
+.td-movs-img2 {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.tr-ver-mas {
+    border-radius: 7px;
+    background-color: #f5f5f5;
+}
+
+.tr-ver-mas-text {
+    font-family: Heebo;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: 0.1px;
+    color: #ee2527;
+}
+
+/**********************************/
 
 @media (min-width: 900px) {
     .row1 {

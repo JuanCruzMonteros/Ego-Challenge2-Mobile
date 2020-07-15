@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo');
 #resumen {
+    overflow-x: hidden;
+    overflow-y: hidden;
     display: grid;
     width: 100%;
     margin: 0 auto;

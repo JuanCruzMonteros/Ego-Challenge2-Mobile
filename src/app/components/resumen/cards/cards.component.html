@@ -2,15 +2,14 @@
     <div class="cardsRow1">
         <img src="./assets/png/cards.png" srcset="./assets/png/cards@2x.png 2x,
    
-                ./assets/png/cards@3x.png 3x" class="Cards">
-        <div class="Text">Tenés 2 Tarjetas</div>
-        <div class="-Label">Ver vencimientos, cierres y últimos consumos</div>
+                ./assets/png/cards@3x.png 3x" class="img-cards">
+        <div class="text-row1">Tenés <span class="text-style-1">2 Tarjetas</span></div>
+        <div class="label-row1">Ver vencimientos, cierres y últimos consumos</div>
         <img src="./assets/png/right.png" srcset="./assets/png/right@2x.png 2x,
-        ./assets/png/right@3x.png 3x" class="right">
-
+        ./assets/png/right@3x.png 3x" class="img-row1">
     </div>
     <div class="cardsRow2">
-        <div class="item card-grid" *ngFor="let card of this.cards">
+        <div class="item card-grid" *ngFor="let card of this.cards ; index as i">
             <div class="left">
                 <img src="{{ card.path }}" srcset="{{ card.path }}@2x.png 2x,
                 {{ card.path }}@3x.png 3x" class="Tarjeta">

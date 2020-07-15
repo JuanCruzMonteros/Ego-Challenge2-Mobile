@@ -16,8 +16,27 @@
     display: flex;
 }
 
-.Text {
-    width: 120px;
+.cardsRow2 {
+    grid-area: cardsRow2;
+    column-gap: 24px;
+    
+    display: flex;
+}
+
+.item {
+    /* width: 302px; */
+    border-radius: 7px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+}
+
+.img-cards {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.text-row1 {
     font-family: Heebo;
     font-size: 16px;
     font-weight: 500;
@@ -28,9 +47,11 @@
     color: #333333;
 }
 
-.-Label {
-    /* width: 249px; */
-    height: 16px;
+.text-row1 .text-style-1 {
+    font-weight: normal;
+}
+
+.label-row1 {
     font-family: Heebo;
     font-size: 12px;
     font-weight: normal;
@@ -42,37 +63,10 @@
     color: #ee2527;
 }
 
-.Text .text-style-1 {
-    font-weight: normal;
-}
-
-.cardsRow2 {
-    grid-area: cardsRow2;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 24px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.box {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
-}
-
-.item {
-    /* width: 302px; */
-    height: 135px;
-    border-radius: 7px;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
-    background-color: #ffffff;
+.img-row1 {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
 }
 
 .card-grid {
@@ -89,11 +83,11 @@
 
 .left .Tarjeta {
     width: 65px;
+    height: 38px;
     object-fit: contain;
 }
 
 .left .Text {
-    width: 58px;
     font-family: Heebo;
     font-size: 12px;
     font-weight: normal;
@@ -105,13 +99,12 @@
 }
 
 .left .Pago {
-    width: 58px;
     font-family: Heebo;
     font-size: 12px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.25;
+    line-height: 1;
     letter-spacing: normal;
     color: #939393;
 }
@@ -132,11 +125,11 @@
 }
 
 .right .Moneda {
-    width: 62px;
     font-family: Heebo;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
+    line-height: 1;
     letter-spacing: -0.5px;
     color: #333333;
 }
@@ -157,7 +150,6 @@
 }
 
 .right .link {
-    width: 58px;
     font-family: Heebo;
     font-size: 12px;
     font-weight: normal;
