@@ -1,3 +1,37 @@
+/* summary */
+
+summary {
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 2px;
+    flex-direction: row;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+details {
+    user-select: none;
+}
+
+details[open] #summary-img {
+    transform: rotate(-180deg);
+}
+
+details[open] #summary-img2 {
+    transform: rotate(-180deg);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+:focus {
+    outline: none;
+}
+
+/*             GRID            */
+
 #cuentas {
     display: grid;
     grid-template-areas: "row1" "row2";
@@ -25,6 +59,8 @@
     margin-right: 10px;
 }
 
+/********************************************************/
+
 .box {
     border-radius: 7px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
@@ -35,13 +71,8 @@
     padding-bottom: 16px;
 }
 
-.Accounts-img {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
-}
-
 .Text {
+    width: calc(50%-20px);
     font-family: Heebo;
     font-size: 16px;
     font-stretch: normal;
@@ -50,6 +81,7 @@
     letter-spacing: normal;
     color: #333333;
     margin-left: 10px;
+    text-overflow: ellipsis;
 }
 
 .Text .text-style-1 {
@@ -60,20 +92,16 @@
     font-weight: 500;
 }
 
-.down {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
-}
-
 .flex-center {
     display: flex;
     align-items: flex-start;
 }
 
 .line {
-    margin: 0;
-    padding: 0;
+    border-width: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
     opacity: 0.7;
     background-color: #f5f5f5;
 }
@@ -89,104 +117,74 @@
     color: #3a3a3a;
 }
 
-/* movimientos */
+/* IMG */
 
-.Fave-Default {
-    width: 22px;
-    height: 22px;
+.Accounts-img {
     object-fit: contain;
 }
 
-/* SUMARY DETAILS */
-
-summary {
-    display: flex;
+.down-img {
+    object-fit: contain;
 }
 
-hr.bg {
-    border-radius: 7px;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
-    background-color: #ffffff;
+.Fave-Default-img {
+    object-fit: contain;
 }
 
-/* SUMMARY MOVIMIENTOS */
+/* TABLES */
 
-.td-movs-item1 {
-    font-family: Heebo;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 0.86;
-    letter-spacing: normal;
-    color: #333333;
+table {
+    width: 100%;
 }
 
-.td-movs-item2 {
-    font-family: Heebo;
-    font-size: 14px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 0.86;
-    letter-spacing: normal;
-    color: #333333;
+td .align-left {
+    text-align: left;
 }
 
-.td-movs-item3 {
-    font-family: Heebo;
-    font-size: 14px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 0.86;
-    letter-spacing: normal;
+td .align-right {
     text-align: right;
-    color: #333333;
-}
-
-.td-movs-img2 {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
-}
-
-.tr-ver-mas {
-    border-radius: 7px;
-    background-color: #f5f5f5;
-}
-
-.tr-ver-mas-text {
-    font-family: Heebo;
-    font-size: 12px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.33;
-    letter-spacing: 0.1px;
-    color: #ee2527;
 }
 
 /**********************************/
 
 @media (min-width: 900px) {
+    #cuentas{
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
     .row1 {
         grid-column: 1;
         grid-row: 1;
         margin-top: 30px;
         margin-bottom: 30px;
         margin-left: 0;
-        margin-right: 12px;
+        margin-right: 0;
     }
     .row2 {
         grid-column: 2;
         grid-row: 1;
         margin-top: 30px;
         margin-bottom: 30px;
-        margin-left: 12px;
+        margin-left: 0;
         margin-right: 0;
     }
 }
+
+/*
+MODIF
+*/
+
+table.cuentas tr:nth-child(2n) {
+    border-top: dotted 1px rgba(93, 93, 93, 0.2);
+}
+
+table.movimientos tr:nth-child(2n) {
+    border-top: dotted 1px rgba(93, 93, 93, 0.2);
+}
+
+/**/
 
 @media (min-width: 750px) {
     .row1 {
@@ -204,5 +202,17 @@ hr.bg {
         margin-bottom: 30px;
         margin-left: 12px;
         margin-right: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    #cuentas {
+        box-shadow: -100px 0px 0px 0px #f5f5f5, +100px 0px 0px 0px #f5f5f5;
+    }
+}
+
+@media (min-width: 1100px) {
+    #cuentas {
+        box-shadow: -200px 0px 0px 0px #f5f5f5, +200px 0px 0px 0px #f5f5f5;
     }
 }

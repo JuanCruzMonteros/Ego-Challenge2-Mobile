@@ -88,10 +88,14 @@
 @media (min-width: 720px) {
     .moneda {
         font-size: 40px;
-   }
+    }
+    .moneda-simbolo {
+        font-size: 32px;
+    }
+}
 
-   .moneda-simbolo {
-    font-size: 32px;
-   }
-
+@media (min-width: 900px) {
+    #money {
+        grid-template-areas: "row1" "row2" "row3";
+    }
 }

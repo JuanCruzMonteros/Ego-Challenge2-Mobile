@@ -12,47 +12,47 @@
                         </b>
                     </span>
                 </div>
-                <img src="./assets/png/down.png" srcset="./assets/png/down@2x.png 2x,
-                                ./assets/png/down@3x.png 3x" class="down">
+                <img id="summary-img" src="./assets/png/down.png" srcset="./assets/png/down@2x.png 2x,
+                                ./assets/png/down@3x.png 3x" class="down-img">
             </summary>
-
-            <table>
+            <table class="cuentas">
                 <tr>
                     <th>EN PESOS</th>
                 </tr>
-                <tr style="border-bottom: 1px dotted #000;" *ngFor="let acc of accPesos; index as i;">
+                <tr  *ngFor="let acc of accPesos; index as i;">
                     <td>
-                        <div *ngIf="i!=1">
+                        <div *ngIf="acc.icon=='star'">
                             <img src="./assets/png/fave-default.png" srcset="./assets/png/fave-default@2x.png 2x,
                        
-                            ./assets/png/fave-default@3x.png 3x" class="Fave-Default">
+                            ./assets/png/fave-default@3x.png 3x" class="Fave-Default-img">
                         </div>
                     </td>
-                    <td class="Text">
+                    <td class="Text align-left">
                         {{ acc.caja }}
                     </td>
-                    <td>{{ acc.numero }}</td>
-                    <td>{{ acc.importe  }}</td>
+                    <td class="align-left">{{ acc.numero }}</td>
+                    <td class="align-right">{{ acc.importe  }}</td>
                 </tr>
 
                 <tr>
                     <th>EN DOLARES</th>
                 </tr>
-                <tr style="border-bottom: 1px dotted #000;" *ngFor="let acc of accDolares; index as i;">
+                <tr *ngFor="let acc of accDolares; index as i;">
                     <td>
                         <div *ngIf="i==5">
                             <img src="./assets/png/fave-default.png" srcset="./assets/png/fave-default@2x.png 2x,
                        
-                            ./assets/png/fave-default@3x.png 3x" class="Fave-Default">
+                            ./assets/png/fave-default@3x.png 3x" class="Fave-Default-img">
                         </div>
                     </td>
 
-                    <td class="Text">
+                    <td class="Text align-left">
                         {{ acc.caja }}
                     </td>
-                    <td>{{ acc.numero }}</td>
-                    <td>{{ acc.importe  }}</td>
+                    <td class="align-left">{{ acc.numero }}</td>
+                    <td class="align-right">{{ acc.importe  }}</td>
                 </tr>
+                <tr class="last-item-acc"><span class="last-item-acc-text">Ver más movimientos</span></tr>
             </table>
         </details>
     </div>
@@ -62,20 +62,32 @@
                 <img src="./assets/png/accounts.png" srcset="./assets/png/accounts@2x.png 2x,
                                     ./assets/png/accounts@3x.png 3x" class="Accounts-img">
                 <div class="Text style-movimientos">
-                        <b>
-                            Últimos movimientos
-                        </b> de tu CA en pesos 1234 2345
+                    <b>
+                        Últimos movimientos
+                    </b> de tu CA en pesos 1234 2345
                 </div>
-                <img src="./assets/png/down.png" srcset="./assets/png/down@2x.png 2x,
-                            ./assets/png/down@3x.png 3x" class="down">
+                <img id="summary-img2"  src="./assets/png/down.png" srcset="./assets/png/down@2x.png 2x,
+                            ./assets/png/down@3x.png 3x" class="down-img">
             </summary>
 
-            <p *ngFor="let mov of movimientos">
-                {{ mov.fecha }} - {{ mov.detalle }} - {{ mov.pago }} - <img src="./assets/png/{{ mov.imagen }}.png"
-                    srcset="./assets/png/{{ mov.imagen }}@2x.png 2x,
-            ./assets/png/{{ mov.imagen }}@3x.png 3x" class="td-movs-img2">
-            </p>
-
+        
+            <table class="movimientos">
+                <tr>
+                    <th>EN DOLARES</th>
+                </tr>
+                <tr *ngFor="let mov of movimientos; index as i;">
+                    <td>
+                        {{ mov.fecha }}
+                    </td>
+                    <td>
+                        {{ mov.detalle }}
+                    </td>
+                    <td>{{ mov.pago }}</td>
+                    <td><img src="./assets/png/{{ mov.imagen }}.png"
+                        srcset="./assets/png/{{ mov.imagen }}@2x.png 2x,
+                ./assets/png/{{ mov.imagen }}@3x.png 3x"></td>
+                </tr>
+            </table>
         </details>
     </div>
 </section>

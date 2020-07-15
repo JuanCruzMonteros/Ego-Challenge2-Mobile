@@ -8,28 +8,27 @@
     margin-right: 15px;
     margin-top: 14;
     margin-bottom: 14;
-    grid-template-areas: "left center right";
+    grid-template-areas: "menu-left menu-center menu-right";
 }
-
 .left-menu {
-    grid-area: left;
+    grid-area: menu-left;
     display: flex;
     align-items: center;
-    justify-content: center;
+    align-self: left;
 }
 
 .center-menu {
-    grid-area: center;
+    grid-area: menu-center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .right-menu {
-    grid-area: right;
+    grid-area: menu-right;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 
 .right {
@@ -107,7 +106,7 @@
     }
 
     .label-saludo-desktop{
-        display: block;
+        display: inline;
     }
     .right-desktop {
         width: 17px;

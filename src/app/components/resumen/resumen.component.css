@@ -2,15 +2,9 @@
 #resumen {
     display: grid;
     margin: 0 auto;
-    grid-gap: 10px;
     grid-template-areas: "navbar""money" "cuentasYMovimientos" "cards" "banner" "text";
 }
-app-header {
-    grid-area: header;
-}
-app-footer{
-    grid-area: footer;
-}
+
 app-money {
     grid-area: money;
 }
@@ -33,21 +27,4 @@ app-banner {
 
 app-text-section{
     grid-area:text;
-}
-
-
-@media (min-width: 900px) {
-    #resumen {
-        display: grid;
-        grid-template-columns: 100px 1fr 100px;
-        grid-template-areas: ". navbar ." ". money . " ". cuentasYMovimientos ." ". cards     ." ". banner   ." ". text .";
-    }
-}
-
-@media (min-width: 1200px) {
-    #resumen {
-        display: grid;
-        grid-template-columns: 200px 1fr 200px;
-        grid-template-areas: ". navbar ." ". money . " ". cuentasYMovimientos ." ". cards     ." ". banner   ." ". text .";
-    }
 }
