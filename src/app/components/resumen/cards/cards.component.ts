@@ -15,6 +15,7 @@ export class CardsComponent implements OnInit {
     vence: "05/12",
     pesos: "14.500",
     dolares: "45",
+    valid: true,
   }, {
     path: "./assets/png/tarjeta_2.png",
     number: "#xxxx - 4567",
@@ -23,7 +24,8 @@ export class CardsComponent implements OnInit {
     vence: "05/12",
     pesos: "14.500",
     dolares: "45",
-  },];
+    valid: true,
+  }];
   constructor() { }
 
   ngOnInit(): void {

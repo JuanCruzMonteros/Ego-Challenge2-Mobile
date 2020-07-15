@@ -7,17 +7,17 @@
 
 .item-img {
     object-fit: contain;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .item-one {
     grid-area: one;
+    margin-left: 10px;
 }
 
 .item-two{
     grid-area: two;
     display: none;
+    width: 100%;
     width: 0;
     height: 0;
 }
@@ -29,16 +29,6 @@
         grid-template-columns: 1fr;
         grid-gap: 24px;
         display: flex;
-    }
-    .item-img {
-        object-fit: contain;
-
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .item-two {
-        display: block;
     }
 }
 
@@ -55,12 +45,11 @@
 
     }
     .item-img {
-        object-fit: contain;
         margin-left: 0;
         margin-right: 0;
     }
 
     .item-two {
-        display: block;
+        overflow: hidden;
     }
 }

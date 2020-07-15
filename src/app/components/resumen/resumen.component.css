@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo');
+@import url('https://fonts.googleapis.com/css?family=Heebo-Regular');
+@import url('https://fonts.googleapis.com/css?family=Heebo-Medium');
+
 #resumen {
     display: grid;
     margin: 0 auto;

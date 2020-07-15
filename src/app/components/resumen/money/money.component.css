@@ -96,6 +96,6 @@
 
 @media (min-width: 900px) {
     #money {
-        grid-template-areas: "row1" "row2" "row3";
+        grid-template-areas: "row1" "row2 row3";
     }
 }

@@ -79,6 +79,9 @@
     font-weight: normal;
 }
 
+.text .text-style-2 {
+    font-weight: 500;
+}
 @media (min-width: 900px) {
     #navbar {
         display: inline;

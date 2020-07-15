@@ -107,7 +107,10 @@ summary::-webkit-details-marker {
 }
 
 .style-movimientos {
-    width: 250px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    
     font-size: 16px;
     font-weight: normal;
     font-stretch: normal;
