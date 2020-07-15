@@ -10,7 +10,34 @@ export class AccountsComponent implements OnInit {
   openAcc = false;
   openMov = false;
 
-  public  movimientos = [{
+  public accPesos = [{
+    icon: "star",
+    caja: "CA",
+    numero: "1234 2345",
+    importe: "$ 20.000,00"
+  }, {
+    icon: "no",
+    caja: "CC",
+    numero: "4567 2345",
+    importe: "$ 20.000,00"
+  }];
+
+  public accDolares = [{
+    icon: "star",
+    caja: "CA",
+    numero: "2345 1234",
+    importe: "u$s 45,00"
+  }, {
+    icon: "no",
+    caja: "CC",
+    numero: "4567 1234",
+    importe: "u$s 0,00"
+  }];
+  
+
+
+
+  public movimientos = [{
     fecha: "30/05",
     detalle: "Transferencia por CBU",
     pago: "- $ 270,00",

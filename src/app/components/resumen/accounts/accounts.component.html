@@ -18,16 +18,40 @@
 
             <table>
                 <tr>
-                    <th>pesos</th>
+                    <th>EN PESOS</th>
                 </tr>
-                <tr style="border-bottom: 1px dotted #000;" *ngFor="let mov of movimientos">
-                    <td><img src="./assets/png/fave-default.png" srcset="./assets/png/fave-default@2x.png 2x,
+                <tr style="border-bottom: 1px dotted #000;" *ngFor="let acc of accPesos; index as i;">
+                    <td>
+                        <div *ngIf="i!=1">
+                            <img src="./assets/png/fave-default.png" srcset="./assets/png/fave-default@2x.png 2x,
                        
-                            ./assets/png/fave-default@3x.png 3x" class="Fave-Default"> </td>
-                    <td class="Text">
-                        {{ mov.detalle }}
+                            ./assets/png/fave-default@3x.png 3x" class="Fave-Default">
+                        </div>
                     </td>
-                    <td>{{ mov.pago }}</td>
+                    <td class="Text">
+                        {{ acc.caja }}
+                    </td>
+                    <td>{{ acc.numero }}</td>
+                    <td>{{ acc.importe  }}</td>
+                </tr>
+
+                <tr>
+                    <th>EN DOLARES</th>
+                </tr>
+                <tr style="border-bottom: 1px dotted #000;" *ngFor="let acc of accDolares; index as i;">
+                    <td>
+                        <div *ngIf="i==5">
+                            <img src="./assets/png/fave-default.png" srcset="./assets/png/fave-default@2x.png 2x,
+                       
+                            ./assets/png/fave-default@3x.png 3x" class="Fave-Default">
+                        </div>
+                    </td>
+
+                    <td class="Text">
+                        {{ acc.caja }}
+                    </td>
+                    <td>{{ acc.numero }}</td>
+                    <td>{{ acc.importe  }}</td>
                 </tr>
             </table>
         </details>
@@ -37,41 +61,15 @@
             <summary (click)="openMov = !openMov">
                 <img src="./assets/png/accounts.png" srcset="./assets/png/accounts@2x.png 2x,
                                     ./assets/png/accounts@3x.png 3x" class="Accounts-img">
-                <div class="Text">
-                    Tenés
-                    <span class="text-style-1">
+                <div class="Text style-movimientos">
                         <b>
-                            4 Cuentas
-                        </b>
-                    </span>
+                            Últimos movimientos
+                        </b> de tu CA en pesos 1234 2345
                 </div>
                 <img src="./assets/png/down.png" srcset="./assets/png/down@2x.png 2x,
                             ./assets/png/down@3x.png 3x" class="down">
             </summary>
 
-
-
-            <!-- <table style="border-collapse:collapse;padding:0;margin:0;">
-                <tr class="tr-movs" *ngFor="let mov of movimientos; let i = index;">
-                    <td class="td-movs-item1">
-                        {{ mov.fecha }}
-                    </td>
-                    <td class="td-movs-item2">
-                        {{ mov.detalle }}
-                    </td>
-                    <td class="td-movs-item3">
-                        {{ mov.pago }}
-                    </td>
-                    <td>
-                        <img src="./assets/png/{{ mov.imagen }}.png" srcset="./assets/png/{{ mov.imagen }}@2x.png 2x,
-                        ./assets/png/{{ mov.imagen }}@3x.png 3x" class="td-movs-img2">
-                    </td>
-                </tr>
-                <tr class="tr-ver-mas tr-ver-mas-text">
-                    Ver más movimientos
-                </tr>
-            </table>
-        -->
             <p *ngFor="let mov of movimientos">
                 {{ mov.fecha }} - {{ mov.detalle }} - {{ mov.pago }} - <img src="./assets/png/{{ mov.imagen }}.png"
                     srcset="./assets/png/{{ mov.imagen }}@2x.png 2x,

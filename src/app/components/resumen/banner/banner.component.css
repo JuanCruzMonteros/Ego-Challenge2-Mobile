@@ -9,8 +9,6 @@
     object-fit: contain;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top:30px;
-    margin-bottom:30px;
 }
 
 .item-one {
@@ -37,8 +35,6 @@
 
         margin-left: 0;
         margin-right: 0;
-        margin-top:30px;
-        margin-bottom:30px;
     }
 
     .item-two {
@@ -57,11 +53,8 @@
         width: 355px;
         height: 200px;
         object-fit: contain;
-
         margin-left: 0;
         margin-right: 0;
-        margin-top:30px;
-        margin-bottom:30px;
     }
 
     .item-two {
