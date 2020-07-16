@@ -6,6 +6,7 @@
     display: grid;
     margin: 0 auto;
     grid-template-areas: "navbar""money" "cuentasYMovimientos" "cards" "banner" "text";
+    grid-template-columns: minmax(0, 1fr);
 }
 
 app-money {

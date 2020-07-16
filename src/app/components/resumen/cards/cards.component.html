@@ -10,7 +10,7 @@
     </div>
     <div class="cardsRow2">
         <div class="item card-grid" *ngFor="let card of this.cards ; index as i" >
-                <div class="left">
+                <div class="left" *ngIf="card.valid">
                     <img src="{{ card.path }}" srcset="{{ card.path }}@2x.png 2x,
                 {{ card.path }}@3x.png 3x" class="Tarjeta">
                     <div class="Text">
@@ -20,7 +20,7 @@
                         {{ card.pago }}
                     </div>
                 </div>
-                <div class="right">
+                <div class="right" *ngIf="card.valid">
                     <div class="cierra">
                         <div class="Text">Cierra {{ card.cierra }} Vence {{ card.vence }}</div>
                     </div>

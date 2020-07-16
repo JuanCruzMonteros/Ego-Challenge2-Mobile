@@ -20,6 +20,7 @@
 }
 
 .contentCenter {
+    grid-column-gap: 20px;
     padding: 0;
     margin: 0;
     display: -webkit-box;
@@ -74,7 +75,6 @@
 
 .moneda-simbolo {
     font-size: 23px;
-    margin-left: 20px;
 }
 
 .moneda-decimales {

@@ -25,6 +25,10 @@ export class CardsComponent implements OnInit {
     pesos: "14.500",
     dolares: "45",
     valid: true,
+  },{
+    valid:false,
+  },{
+    valid: false,
   }];
   constructor() { }
 

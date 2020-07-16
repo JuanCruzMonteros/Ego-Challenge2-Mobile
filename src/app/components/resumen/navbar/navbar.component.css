@@ -29,6 +29,7 @@
     grid-column: item1;
     grid-column: 1/2;
     grid-template-columns: 1fr;
+    
 }
 
 .item2 {

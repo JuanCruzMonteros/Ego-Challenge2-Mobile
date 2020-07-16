@@ -18,7 +18,7 @@
 
 .cardsRow2 {
     grid-area: cardsRow2;
-    column-gap: 24px;
+    column-gap: 10px;
     display: flex;
 }
 
@@ -33,7 +33,7 @@ tr .last-item-acc {
     background-color: #f5f5f5;
 }
 
-span .last-item-acc-text{
+span .last-item-acc-text {
     font-family: Heebo;
     font-size: 12px;
     font-weight: normal;
@@ -45,8 +45,6 @@ span .last-item-acc-text{
 }
 
 .img-cards {
-    width: 22px;
-    height: 22px;
     object-fit: contain;
 }
 
@@ -78,12 +76,12 @@ span .last-item-acc-text{
 }
 
 .img-row1 {
-    width: 15px;
-    height: 15px;
     object-fit: contain;
 }
 
 .card-grid {
+    width: 302px;
+    height: 135px;
     display: grid;
     grid-template-areas: left right;
     column-gap: 30px;
@@ -92,12 +90,11 @@ span .last-item-acc-text{
 }
 
 .left {
+    display: grid;
     grid-column: 1;
 }
 
 .left .Tarjeta {
-    width: 65px;
-    height: 38px;
     object-fit: contain;
 }
 
@@ -118,12 +115,17 @@ span .last-item-acc-text{
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1;
+    line-height: 1.25;
     letter-spacing: normal;
     color: #939393;
+
+    display: flex;
+    align-content: flex-end;
+    align-self: flex-end;
 }
 
 .right {
+    display: grid;
     grid-column: 2;
 }
 
@@ -172,6 +174,10 @@ span .last-item-acc-text{
     line-height: 1.33;
     letter-spacing: 0.1px;
     color: #ee2527;
+
+    display: flex;
+    align-content: flex-end;
+    align-self: flex-end;
 }
 
 @media (min-width: 900px) {
@@ -184,6 +190,9 @@ span .last-item-acc-text{
         padding-right: 0;
         margin-left: 0;
         margin-right: 0;
+    }
+    .cardsRow2 {
+        column-gap: 24px;
     }
 }
 
