@@ -7,6 +7,7 @@
 .card-grid {
     display: grid;
     grid-template-areas: "item1 item2 item3 item4";
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .column {

@@ -9,6 +9,7 @@
     margin-top: 14;
     margin-bottom: 14;
     grid-template-areas: "menu-left menu-center menu-right";
+    grid-template-columns: repeat(3, 1fr);
 }
 .left-menu {
     grid-area: menu-left;
